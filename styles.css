@@ -1,3 +1,8 @@
+@media screen and (min-width: 80rem) {
+    .container {
+      margin: 1em 2em;
+    }
+  }
 * {
     margin: 0;
 }
@@ -36,6 +41,9 @@ ul a:hover {
     background-color: #F5F0E6;
     scroll-margin-top: 144px;
 }
+.S1 img {
+    max-width: 100%;
+}
 .S1 p {
     font-size: 28px;
     margin: auto;
@@ -47,6 +55,9 @@ ul a:hover {
     background-image: url("https://www.ucsd.edu/_resources/img/bg-orbs-1.jpg");
     color: white;
     scroll-margin-top: 144px;
+}
+.S2 img {
+    max-width: 100%;
 }
 .S2 p {
     font-size: 28px;
