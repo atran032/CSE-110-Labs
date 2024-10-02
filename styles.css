@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    scroll-margin-top: 154.63px;
+    scroll-margin-top: 162.5px;
 }
 
 .navbar {
@@ -131,3 +131,78 @@ ul a:hover {
     overflow-y: scroll;
     text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+    ul a {
+        display: none;
+    }
+    .navbar img {
+        max-width: 75%;
+    }
+
+    .S1 h2 {
+        font-size: 24px;
+        padding: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .S2 h2 {
+        font-size: 24px;
+        padding: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .S3 h2 {
+        font-size: 24px;
+        padding: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .S1 img {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .S2 img {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .S1 p {
+        font-size: 20px;
+        padding: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .S2 p {
+        font-size: 20px;
+        padding: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .box1 {
+        font-size: 20px;
+        grid-row: 1;
+        grid-column: 1;
+        padding: 10%
+    }
+    .box2 {
+        font-size: 20px;
+        grid-row: 2;
+        grid-column: 1;
+        padding: 10%
+    }
+    .box3 {
+        font-size: 20px;
+        grid-row: 1;
+        grid-column: 2;
+        padding: 10%
+    }
+    .box4 {
+        font-size: 20px;
+        grid-row: 2;
+        grid-column: 2;
+        padding: 10%
+    }
+  }
