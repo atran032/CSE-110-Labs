@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    scroll-margin-top: 154.63px;
 }
 
 .navbar {
@@ -15,6 +16,8 @@ ul {
 }
 .navbar img {
     max-width: 400px;
+    padding: 1.5%;
+    padding-bottom: 0%;
 }
 ul a {
     float: left;
@@ -34,93 +37,97 @@ ul a:hover {
     width: 100%;
     display: inline-block;
     background-color: #F5F0E6;
-    scroll-margin-top: 144px;
+}
+.S1 h2 {
+    padding: 1.5%;
+    font-size: 32px;
 }
 .S1 img {
     max-width: 100%;
+    padding: 1.5%;
 }
 .S1 p {
     font-size: 28px;
-    margin: auto;
-    width: 98%;
+    padding: 1.5%;
+    text-align: justify;
+    text-justify: inter-word;
 }
 .S2 {
     width: 100%;
     display: inline-block;
     background-image: url("https://www.ucsd.edu/_resources/img/bg-orbs-1.jpg");
     color: white;
-    scroll-margin-top: 144px;
+}
+.S2 h2 {
+    padding: 1.5%;
+    font-size: 32px;
 }
 .S2 img {
     max-width: 100%;
+    padding: 1.5%;
 }
 .S2 p {
     font-size: 28px;
+    padding: 1.5%;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .S3 {
     display: inline-block;
     background-color: #F5F0E6;
-    scroll-margin-top: 144px;
+}
+.S3 h2 {
+    padding: 1.5%;
+    font-size: 32px;
 }
 .S3grid {
     display: grid;
     gap: 25px;
     font-size: 28px;
-    padding: 25px 25px;
+    padding: 1.5%;
 }
 .box1 {
     grid-row: 1;
     grid-column: 1;
     padding: 25px 25px;
-    text-align: center;
     background-color: #182b49;
     color: white;
     max-height: 500px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    text-align: center;
 }
 .box2 {
     grid-row: 1;
     grid-column: 2;
     padding: 25px 25px;
-    text-align: center;
     background-color: #182b49;
     color: white;
     max-height: 500px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    text-align: center;
 }
 .box3 {
     grid-row: 1;
     grid-column: 3;
     padding: 25px 25px;
-    text-align: center;
     background-color: #182b49;
     color: white;
     max-height: 500px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    text-align: center;
 }
 .box4 {
     grid-row: 1;
     grid-column: 4;
     padding: 25px 25px;
-    text-align: center;
     background-color: #182b49;
     color: white;
     max-height: 500px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    text-align: center;
 }
-
-@media screen and (max-width: 800px) {
-    .container {
-      margin: 1em 2em;
-    }
-    .navbar a {
-        visibility: collapse;
-    }
-    .navbar img {
-        max-width: 75%;
-    }
-    .navbar {
-        max-height: 80px;
-    }
-  }
