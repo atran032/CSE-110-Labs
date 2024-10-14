@@ -30,7 +30,7 @@ export function ToDoList() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{display: 'flex', justifyContent: 'center'}}>
       <div className="App-body">
         Items bought: {numRemainingItems}
         <form action=".">
