@@ -71,7 +71,7 @@ export const StickyNotes = () => {
           <div><input placeholder="Note Title" onChange={(event) =>
             setCreateNote({ ...createNote, title: event.target.value })} required>
           </input></div>
-          <div><textarea onChange={(event) =>
+          <div><textarea placeholder= "Note Content" onChange={(event) =>
             setCreateNote({ ...createNote, content: event.target.value })} required>
             </textarea></div>
           <div>
