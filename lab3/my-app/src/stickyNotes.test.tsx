@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, within } from "@testing-library/react";
 import { StickyNotes } from "./stickyNotes";
 import exp from "constants";
 
@@ -67,12 +67,10 @@ describe("required tests", () => {
         const newNoteTitle = screen.getByText("New Note");
         const newNoteContent = screen.getByText("Note Content");
 
-        fireEvent.click(newNoteTitle);
-        fireEvent.change(newNoteTitle, { target: { value: "Hello" } });
-        fireEvent.click(newNoteContent)
-        fireEvent.change(newNoteContent, {
-          target: { value: "World" },
-        });
+        fireEvent.input(newNoteTitle, { target: { textContent: "Hello" } });
+        fireEvent.blur(newNoteTitle);
+        fireEvent.input(newNoteContent, { target: { textContent: "World" } });
+        fireEvent.blur(newNoteContent)
 
         const Hello = screen.getByText("Hello");
         const World = screen.getByText("World");
@@ -97,10 +95,10 @@ describe("required tests", () => {
         const newNoteTitle = screen.getByText("New Note");
         const newNoteContent = screen.getByText("Note Content");
 
-        const deleteButton = screen.getByText("X");
-        fireEvent.click(deleteButton);
+        const deleteButton = screen.getByTestId('X-7');
+        fireEvent.click(deleteButton);  
 
         expect(newNoteTitle).not.toBeInTheDocument();
-        expect(newNoteTitle).not.toBeInTheDocument();
+        expect(newNoteContent).not.toBeInTheDocument();
     });
 });

@@ -97,7 +97,7 @@ export const StickyNotes = () => {
               <div className="notes-header">
                 <button onClick={() => handleLike(Note.id)}>{Note.like ? '❤️' : '🤍'}</button>
                 <button onClick={() => handleUpdate(Note.id)}>💾</button>
-                <button onClick={() => handleDelete(Note.id)}style={{color: currentTheme.text}}>X</button>
+                <button data-testid={`X-${Note.id}`} onClick={() => handleDelete(Note.id)}style={{color: currentTheme.text}}>X</button>
               </div>
               <h2 contentEditable="true" onBlur={(event) =>
                 setSelectedNote({ ...selectedNote, title: event.target.innerText })}>{Note.title}
