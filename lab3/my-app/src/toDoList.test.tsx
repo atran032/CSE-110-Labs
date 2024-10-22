@@ -27,4 +27,38 @@ describe ("required tests", () => {
         const count2 = screen.getByText("Items bought: 2")
         expect(count2).toBeInTheDocument();
     });
+
+    test("double clicking", async () => {
+        render(<ToDoList />);
+      
+        const appleCheckbox = screen.getByTestId(`checkbox-${dummyGroceryList[0].name}`);
+        const bananaCheckbox = screen.getByTestId(`checkbox-${dummyGroceryList[1].name}`);
+      
+        fireEvent.click(appleCheckbox);
+        fireEvent.click(appleCheckbox);
+        const count0 = await screen.findByText("Items bought: 0");
+        expect(count0).toBeInTheDocument();
+      
+        fireEvent.click(bananaCheckbox);
+        fireEvent.click(bananaCheckbox);
+        const count1 = await screen.findByText("Items bought: 0");
+        expect(count1).toBeInTheDocument();
+      });
+
+      test("triple clicking", async () => {
+        render(<ToDoList />);
+        const appleCheckbox = screen.getByTestId(`checkbox-${dummyGroceryList[0].name}`);      
+        fireEvent.click(appleCheckbox);
+        fireEvent.click(appleCheckbox);
+        fireEvent.click(appleCheckbox);
+        const count0 = await screen.findByText("Items bought: 1");
+        expect(count0).toBeInTheDocument();
+      
+        const bananaCheckbox = screen.getByTestId(`checkbox-${dummyGroceryList[1].name}`);
+        fireEvent.click(bananaCheckbox);
+        fireEvent.click(bananaCheckbox);
+        fireEvent.click(bananaCheckbox);
+        const count1 = await screen.findByText("Items bought: 2");
+        expect(count1).toBeInTheDocument();
+      });
 });
